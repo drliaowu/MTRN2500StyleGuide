@@ -412,6 +412,156 @@ code {
 <li><a href="#specific-naming-conventions">Specific Naming Conventions</a>
 <ul>
 <li><a href="#cs311-the-term-set-must-be-used-where-an-attribute-is-changed-directly">#CS311 The term set must be used where an attribute is changed directly.</a></li>
+<li><a href="#cs312m-methods-that-return-a-value-should-be-named-after-the-value-they-return-with-get-prefix">#CS312M Methods that return a value should be named after the value they return, with get prefix.</a></li>
+<li><a href="#cs313-the-compute-prefix-should-be-used-in-methods-where-something-complex-is-computed">#CS313 The <code>compute</code> prefix should be used in methods where something (complex) is computed.</a></li>
+<li><a href="#cs314-the-find-prefix-should-be-used-in-methods-where-something-is-looked-up">#CS314 The <code>find</code> prefix should be used in methods where something is looked up.</a></li>
+<li><a href="#cs315-the-init-prefix-should-be-used-where-an-object-or-a-concept-is-established-and-match-with-a-corresponding-cleanup-prefix">#CS315 The <code>init</code> prefix should be used where an object or a concept is established and match with a corresponding <code>cleanup</code> prefix.</a></li>
+<li><a href="#cs316-variables-representing-gui-components-should-be-suffixed-by-the-component-type-name">#CS316 Variables representing GUI components should be suffixed by the component type name.</a></li>
+<li><a href="#cs317-plural-form-should-be-used-on-names-representing-a-collection-of-objects">#CS317 Plural form should be used on names representing a collection of objects.</a></li>
+<li><a href="#cs318-the-n-prefix-should-be-used-for-variables-representing-a-number-of-objects">#CS318 The <code>n</code> prefix should be used for variables representing a number of objects.</a></li>
+<li><a href="#cs319m-use-normal-variable-name-for-range-based-for-loop-iterator-variables-should-be-called-i-j-k-etc">#CS319M Use normal variable name for range-based for loop, Iterator variables should be called i, j, k etc.</a></li>
+<li><a href="#cs320-the-is-prefix-should-be-used-for-boolean-variables-and-methods">#CS320 The <code>is</code> prefix should be used for boolean variables and methods.</a></li>
+<li><a href="#cs321-complement-names-must-be-used-for-complement-operations">#CS321 Complement names must be used for complement operations.</a></li>
+<li><a href="#cs322-negated-boolean-names-must-be-avoided">#CS322 Negated boolean names must be avoided.</a></li>
+</ul>
+</li>
+<li><a href="#files">Files</a>
+<ul>
+<li><a href="#cs324-use-pascal-case-for-source-files">#CS324 Use pascal case for source files</a></li>
+<li><a href="#cs325-a-class-should-be-declared-in-a-header-file-and-defined-in-a-source-file-where-the-name-of-the-files-match-the-name-of-the-class">#CS325 A class should be declared in a header file and defined in a source file where the name of the files match the name of the class.</a></li>
+<li><a href="#cs326-inline-simple-methods">#CS326 Inline simple methods</a></li>
+<li><a href="#cs327-inline-performance-critical-methods">#CS327 Inline performance critical methods</a></li>
+</ul>
+</li>
+<li><a href="#include-files-and-include-statements">Include Files and Include Statements</a>
+<ul>
+<li><a href="#cs329-header-files-must-contain-an-include-guard">#CS329 Header files must contain an include guard</a></li>
+<li><a href="#cs330-sort-include-statements-in-header-blocks">#CS330 Sort <code>#include</code> statements in header blocks</a></li>
+<li><a href="#cs330m-only-include-header-file-needed-to-declare-a-class-in-the-class-header-file">#CS330M Only <code>#include</code> header file needed to declare a class in the class header file</a></li>
+<li><a href="#cs331-dont-use-an-include-when-a-forward-declaration-would-suffice">#CS331 Don't use an #include when a forward declaration would suffice</a></li>
+</ul>
+</li>
+<li><a href="#statements">Statements</a>
+<ul>
+<li><a href="#cs333-types-that-are-local-to-one-file-only-can-be-declared-inside-that-file">#CS333 Types that are local to one file only can be declared inside that file.</a></li>
+<li><a href="#cs334-use-a-struct-only-for-passive-objects-that-carry-data-everything-else-is-a-class">#CS334 Use a struct only for passive objects that carry data; everything else is a class.</a></li>
+<li><a href="#cs335-the-parts-of-a-class-must-be-sorted-public-protected-and-private-all-sections-must-be-identified-explicitly">#CS335 The parts of a class must be sorted public, protected and private. All sections must be identified explicitly.</a></li>
+</ul>
+</li>
+<li><a href="#inheritance">Inheritance</a>
+<ul>
+<li><a href="#cs337-do-not-change-the-publicprotectedprivate-status-of-a-method-in-derived-classes">#CS337 Do not change the public/protected/private status of a method in derived classes.</a></li>
+<li><a href="#cs338-use-virtual-in-front-of-a-derived-function-declaration-if-the-base-class-function-was-declared-virtual">#CS338 Use virtual in front of a derived function declaration if the base class function was declared virtual.</a></li>
+<li><a href="#cs339-always-declare-destructors-as-virtual-except-in-classes-that-are-not-meant-to-be-derived">#CS339 Always declare destructors as virtual except in classes that are not meant to be derived.</a></li>
+<li><a href="#cs340-declare-a-function-virtual-only-if-it-is-going-to-be-used-polymorphically">#CS340 Declare a function virtual only if it is going to be used polymorphically.</a></li>
+<li><a href="#cs341-use-public-inheritance-exclusively">#CS341 Use public inheritance exclusively.</a></li>
+</ul>
+</li>
+<li><a href="#variables">Variables</a>
+<ul>
+<li><a href="#cs343b-variables-should-be-initialized-where-they-are-declared">#CS343B Variables should be initialized where they are declared.</a></li>
+<li><a href="#cs343m-variable-should-be-declared-where-they-are-used">#CS343M Variable should be declared where they are used</a></li>
+<li><a href="#cs344-member-variables-should-be-initialized-in-the-constructor-initialization-list-provided-it-doesnt-yield-code-duplication-in-other-constructors">#CS344 Member variables should be initialized in the constructor initialization list provided it doesn't yield code duplication in other constructors.</a></li>
+<li><a href="#cs345-place-a-functions-variables-in-the-narrowest-scope-possible-block-function-class-and-initialize-variables-in-the-declaration">#CS345 Place a function's variables in the narrowest scope possible (block, function, class), and initialize variables in the declaration.</a></li>
+<li><a href="#cs346-do-not-use-global-variables-use-singletons-or-static-methods-instead">#CS346 Do not use global variables, use singletons or static methods instead.</a></li>
+<li><a href="#cs347-use-the-copy-constructor-for-an-object-definition">#CS347 Use the copy constructor for an object definition</a></li>
+<li><a href="#cs348-class-variables-should-never-be-declared-public-use-getters-and-setters-instead">#CS348 Class variables should never be declared public. Use getters and setters instead.</a></li>
+<li><a href="#cs349-c-pointers-and-references-should-have-their-reference-symbol-next-to-the-name-rather-than-to-the-type">#CS349 C++ pointers and references should have their reference symbol next to the name rather than to the type.</a></li>
+<li><a href="#cs350-implicit-test-for-0-should-not-be-used-other-than-for-boolean-and-pointer-variables">#CS350 Implicit test for 0 should not be used other than for boolean and pointer variables.</a></li>
+<li><a href="#cs351-do-not-test-boolean-expressions-against-true-or-false">#CS351 Do not test boolean expressions against true or false</a></li>
+</ul>
+</li>
+<li><a href="#loops">Loops</a>
+<ul>
+<li><a href="#cs353m-loop-variables-should-be-initialized-immediately-before-the-loop-for-while-loop">#CS353M Loop variables should be initialized immediately before the loop for while loop.</a></li>
+<li><a href="#cs354-the-use-of-break-and-continue-in-loops-should-only-be-used-if-they-give-higher-readability-than-their-structured-counterparts">#CS354 The use of break and continue in loops should only be used if they give higher readability than their structured counterparts.</a></li>
+<li><a href="#cs355-the-while-true-form-should-be-used-for-infinite-loops">#CS355 The <code>while (true)</code> form should be used for infinite loops.</a></li>
+</ul>
+</li>
+<li><a href="#conditionals">Conditionals</a>
+<ul>
+<li><a href="#cs357-the-if-else-class-of-statements-should-have-the-following-form">#CS357 The if-else class of statements should have the following form:</a></li>
+<li><a href="#cs358-a-for-statement-should-have-the-following-form">#CS358 A for statement should have the following form:</a></li>
+<li><a href="#cs359-a-while-statement-should-have-the-following-form">#CS359 A while statement should have the following form:</a></li>
+<li><a href="#cs360m-if-while-or-for-statement-must-be-written-with-brackets">#CS360M <code>if</code>, <code>while</code>, or <code>for</code> statement must be written with brackets.</a></li>
+<li><a href="#cs361-assignment-in-conditionals-must-be-avoided">#CS361 Assignment in conditionals must be avoided.</a></li>
+</ul>
+</li>
+<li><a href="#functions-1">Functions</a>
+<ul>
+<li><a href="#cs363-write-small-and-focused-functions-the-body-of-a-function-should-not-exceed-one-page-no-scrolling">#CS363 Write small and focused functions: the body of a function should not exceed one page (no scrolling).</a></li>
+<li><a href="#cs364-high-level-and-low-level-code-should-not-be-mixed-in-a-same-function">#CS364 High-level and low-level code should not be mixed in a same function.</a></li>
+<li><a href="#cs365m-when-defining-a-function-parameters-should-be-inputs-only-for-out-output-values-prefer-return-values-to-output-parameters">#CS365M When defining a function, parameters should be inputs only, For &quot;out&quot; output values, prefer return values to output parameters</a></li>
+<li><a href="#cs366-prefer-pre-incrementation-over-post-incrementation-whenever-possible">#CS366 Prefer pre-incrementation over post-incrementation whenever possible.</a></li>
+</ul>
+</li>
+<li><a href="#enums">Enums</a>
+<ul>
+<li><a href="#cs367-prefer-implicit-initialization">#CS367 Prefer implicit initialization.</a></li>
+<li><a href="#cs367b-prefer-enum-class-over-enums">#CS367B Prefer enum class over enums</a>
+<ul>
+<li><a href="#reason">Reason</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#cs368-prefer-int-data-type-for-integer-numbers-including-unsigned-integer-numbers">#CS368 Prefer <code>int</code> data type for integer numbers, including unsigned integer numbers.</a></li>
+<li><a href="#cs369-prefer-double-data-type-for-floating-point-numbers">#CS369 Prefer <code>double</code> data type for floating point numbers.</a></li>
+<li><a href="#cs370-floating-point-constants-should-be-written-with-decimal-point-and-at-least-one-decimal">#CS370 Floating point constants should be written with decimal point and at least one decimal.</a></li>
+<li><a href="#cs371-use-0-for-integers-00-for-reals-nullptr-for-pointers-and-0-for-chars">#CS371 Use 0 for integers, 0.0 for reals, nullptr for pointers, and '\0' for chars.</a></li>
+<li><a href="#cs372-use-c-static_cast-instead-of-c-style-casts">#CS372 Use C++ static_cast&lt;&gt;() instead of C style casts.</a></li>
+<li><a href="#cs373-use-c-dynamic_cast-to-test-the-run-time-type-of-an-object">#CS373 Use C++ dynamic_cast&lt;&gt;() to test the run-time type of an object.</a></li>
+<li><a href="#cs374-do-never-use-the-friend-keyword-but-for-operator-overloading">#CS374 Do never use the friend keyword (but for operator overloading).</a></li>
+<li><a href="#cs375-avoid-defining-macros-at-all-costs">#CS375 Avoid defining macros at all costs.</a></li>
+<li><a href="#cs375b-use-constexpr-variable-or-enum-instead-of-define">#CS375B Use <code>constexpr</code> variable or <code>enum</code> instead of <code>#define</code></a></li>
+<li><a href="#cs376-avoid-operator-overloading-except-in-these-two-cases">#CS376 Avoid operator overloading, except in these two cases:</a></li>
+<li><a href="#cs377-use-const-whenever-it-makes-sense-to-do-so-eg">#CS377 Use const whenever it makes sense to do so, e.g.,:</a></li>
+</ul>
+</li>
+<li><a href="#white-space">White Space</a>
+<ul>
+<li><a href="#cs379-special-characters-like-tab-and-page-break-must-be-avoided">#CS379 Special characters like Tab and page break must be avoided.</a></li>
+<li><a href="#cs380m-basic-indentation-should-be-4-spaces">#CS380M Basic indentation should be 4 spaces.</a></li>
+<li><a href="#cs381-conventional-operators-should-be-surrounded-by-a-space-character-commas-and-semi-colons-in-for-loops-should-be-followed-by-a-white-space">#CS381 Conventional operators should be surrounded by a space character. Commas and semi-colons (in for loops) should be followed by a white space.</a></li>
+<li><a href="#cs382-logical-units-within-a-block-should-be-separated-by-one-blank-line">#CS382 Logical units within a block should be separated by one blank line.</a></li>
+<li><a href="#cs383-use-alignment-wherever-it-enhances-readability">#CS383 Use alignment wherever it enhances readability.</a></li>
+</ul>
+</li>
+<li><a href="#comments-1">Comments</a>
+<ul>
+<li><a href="#cs385-use--for-all-comments-including-multi-line-comments">#CS385 Use // for all comments, including multi-line comments.</a></li>
+<li><a href="#cs386-use--only-for-temporary-debugging-purposes">#CS386 Use /**/ only for temporary debugging purposes.</a></li>
+<li><a href="#cs387-follow-the-standard-indentation-for-a-switch-statement">#CS387 Follow the standard indentation for a <code>switch</code> statement.</a></li>
+<li><a href="#cs388-follow-the-standard-indentation-for-a-class-declaration">#CS388 Follow the standard indentation for a class declaration</a></li>
+<li><a href="#cs389-in-a-class-declaration-order-privacy-levels-signals-and-slots-the-following-way">#CS389 In a class declaration, order privacy levels, signals and slots, the following way:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#3-coding-style">3. Coding Style</a></p>
+<ul>
+<li><a href="#cs300-tools">#CS300 Tools</a></li>
+<li><a href="#naming-conventions">Naming Conventions</a>
+<ul>
+<li><a href="#cs301-pascal-case-for-type-names">#CS301 Pascal case for type names</a></li>
+<li><a href="#cs302-camel-case-for-variable-names">#CS302 Camel case for variable names</a></li>
+<li><a href="#cs303-non-static-private-class-variables-should-have-the-m-prefix">#CS303 Non-static private class variables should have the &quot;m&quot; prefix.</a></li>
+<li><a href="#cs304-static-private-class-variables-should-have-the-c-prefix">#CS304: Static private class variables should have the &quot;c&quot; prefix.</a></li>
+<li><a href="#cs305-static-variables-non-class-members-should-have-the-g-prefix">#CS305: Static variables (non-class members) should have the &quot;g&quot; prefix.</a></li>
+<li><a href="#cs305m-global-constant-names-including-enum-values-must-be-all-uppercase-using-underscore-to-separate-words">#CS305M Global constant names (including enum values) must be all uppercase using underscore to separate words.</a></li>
+<li><a href="#cs306-names-representing-methods-or-functions-must-be-written-in-mixed-case-starting-with-lower-case">#CS306 Names representing methods or functions must be written in mixed case starting with lower case.</a></li>
+<li><a href="#cs307-names-representing-template-types-should-be-a-single-uppercase-letter">#CS307 Names representing template types should be a single uppercase letter.</a></li>
+<li><a href="#cs308-generic-variables-should-have-the-same-name-as-their-type">#CS308 Generic variables should have the same name as their type.</a></li>
+<li><a href="#cs308-variables-with-a-large-scope-should-have-long-names-variables-with-a-small-scope-can-have-shorter-names">#CS308 Variables with a large scope should have long names, variables with a small scope can have shorter names.</a></li>
+<li><a href="#cs309-the-name-of-the-object-is-implicit-and-should-be-avoided-in-a-method-name">#CS309 The name of the object is implicit, and should be avoided in a method name.</a></li>
+</ul>
+</li>
+<li><a href="#specific-naming-conventions">Specific Naming Conventions</a>
+<ul>
+<li><a href="#cs311-the-term-set-must-be-used-where-an-attribute-is-changed-directly">#CS311 The term set must be used where an attribute is changed directly.</a></li>
 <li><a href="#cs312-methods-that-return-a-value-should-be-named-after-the-value-they-return-without-get-prefix">#CS312 Methods that return a value should be named after the value they return (without get prefix).</a></li>
 <li><a href="#cs313-the-compute-prefix-should-be-used-in-methods-where-something-complex-is-computed">#CS313 The <code>compute</code> prefix should be used in methods where something (complex) is computed.</a></li>
 <li><a href="#cs314-the-find-prefix-should-be-used-in-methods-where-something-is-looked-up">#CS314 The <code>find</code> prefix should be used in methods where something is looked up.</a></li>
