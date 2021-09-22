@@ -1,41 +1,371 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>MTRN2500 CPP Style Guide</title>
-        <style>
-/* From extension vscode.markdown-math */
-@font-face{font-family:KaTeX_AMS;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Script;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size1;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size2;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size3;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size4;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Typewriter;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype");font-weight:400;font-style:normal}.katex{font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0;text-rendering:auto;border-color:currentColor}.katex *{-ms-high-contrast-adjust:none!important}.katex .katex-version:after{content:"0.13.0"}.katex .katex-mathml{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-weight:700;font-style:italic}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{display:inline-table;table-layout:fixed;border-collapse:collapse}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;vertical-align:bottom;position:relative}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;vertical-align:bottom;font-size:1px;width:2px;min-width:2px}.katex .vbox{display:inline-flex;flex-direction:column;align-items:baseline}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{width:0;max-width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{display:inline-block;width:100%;border-bottom-style:solid}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{width:0;position:relative}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{display:inline-block;border:0 solid;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{display:inline-block;width:100%;border-bottom-style:solid}.katex .hdashline{display:inline-block;width:100%;border-bottom-style:dashed}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{display:block;position:absolute;width:100%;height:inherit;fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1}.katex svg path{stroke:none}.katex img{border-style:none;min-width:0;min-height:0;max-width:none;max-height:none}.katex .stretchy{width:100%;display:block;position:relative;overflow:hidden}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{width:100%;position:relative;overflow:hidden}.katex .halfarrow-left{position:absolute;left:0;width:50.2%;overflow:hidden}.katex .halfarrow-right{position:absolute;right:0;width:50.2%;overflow:hidden}.katex .brace-left{position:absolute;left:0;width:25.1%;overflow:hidden}.katex .brace-center{position:absolute;left:25%;width:50%;overflow:hidden}.katex .brace-right{position:absolute;right:0;width:25.1%;overflow:hidden}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{box-sizing:border-box;border:.04em solid}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{box-sizing:border-content;border-top:.049em solid;border-right:.049em solid;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{counter-increment:katexEqnNo;content:"(" counter(katexEqnNo) ")"}.katex .mml-eqn-num:before{counter-increment:mmlEqnNo;content:"(" counter(mmlEqnNo) ")"}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;position:absolute;left:calc(50% + .3em);text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{text-align:left;padding-left:2em}body{counter-reset:katexEqnNo mmlEqnNo}
+<html>
+<head>
+<title>Style_Guide.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-.katex-error {
-	color: var(--vscode-editorError-foreground);
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
 }
 
 </style>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+
 <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        </style>
-        <style>
-.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
 </style>
-        
-        
-        
-    </head>
-    <body class="vscode-body vscode-light">
-        <h1 id="mtrn2500-cpp-style-guide">MTRN2500 CPP Style Guide</h1>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="mtrn2500-cpp-style-guide">MTRN2500 CPP Style Guide</h1>
 <ul>
 <li><a href="#mtrn2500-cpp-style-guide">MTRN2500 CPP Style Guide</a>
 <ul>
@@ -219,7 +549,7 @@
 C and C++ have great flexibility in terms of formatting and variable names.
 The best formatting style is a personal preference that has no single correct answer.
 The most important key for a C++ project is to pick one style and stick to it.
-C++ projects will typically formalise their choice in a style guide (EG: Chromium C++ style guide<a href="https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.html">^chromium</a>,
+C++ projects will typically formalise their choice in a style guide (EG: Chromium C++ style guide<a href="https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md">^chromium</a>,
 Joint Strike Fighter Air Vehicle C++ coding standards<a href="https://www.stroustrup.com/JSF-AV-rules.pdf">^jsf</a>,
 ros2 code style<a href="https://index.ros.org/doc/ros2/Contributing/Code-Style-Language-Versions/">^ros</a>, and Webots C++ coding style<a href="https://github.com/cyberbotics/webots/wiki/CPP-Coding-Style">^webots</a>).
 New contributors should follow the existing style in a project.
@@ -228,7 +558,7 @@ Since this course's assessment will be based on Webots platform, we will adopt t
 as a result it contains many features that must be used very carefully.
 Some C++ features are not recommended due to safety concerns, deprecated, or have better alternatives.
 Others should only be used after careful assessment.
-See C++ Core Guidelines<a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.html">^core</a> for a list compiled by domain experts.
+See C++ Core Guidelines<a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md">^core</a> for a list compiled by domain experts.
 This course will further prohibit some C features to encourage use of C++ alternatives.</p>
 <p>One thing to keep in mind is that a programming style guide is a general guideline, recommendation that should be followed.
 There may be a use case that justify breaking the guideline, but that should only be done after careful consideration and documented in the code.</p>
@@ -302,19 +632,19 @@ Don't say in comment what is obvious in the code.</p>
 </ol>
 <h4 id="cs203-explain-non-trivial-function">#CS203 Explain non trivial function</h4>
 <p>Add a comment about each non trivial function declaration explaining the purpose of the function and how to use it.</p>
-<pre><code><code><div>/// \brief Implement sending marker from one object to display topic.
+<pre class="hljs"><code><div>/// \brief Implement sending marker from one object to display topic.
 /// \param[in] parameter_name description. // for any input parameter
 /// \param[out] parameter_name description. // for any output parameter
 /// \return description of return value
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs204-file-header-block">#CS204 File header block</h4>
 <p>For additional explanation of what make a good comment, please read Clean C++ by Stephan Roth Chapter 4 section: comments.</p>
-<pre><code><code><div>// File:        FileName.cpp
+<pre class="hljs"><code><div>// File:        FileName.cpp
 // Description: Short explanation
 // Author:      Author Name
 // zID:         z1234567
 // Date:        XX/XX/2020
-</div></code></code></pre>
+</div></code></pre>
 <h2 id="3-coding-style">3. Coding Style</h2>
 <p>This section will detail formatting style chosen for this course based on Webots CPP coding style.</p>
 <h3 id="cs300-tools">#CS300 Tools</h3>
@@ -327,40 +657,40 @@ The only additional setting is to keep maximum column to 128.</p>
 <h3 id="naming-conventions">Naming Conventions</h3>
 <h4 id="cs301-pascal-case-for-type-names">#CS301 Pascal case for type names</h4>
 <p>Names representing types must be in <code>PascalCase</code> notation: mixed case starting with upper case.</p>
-<pre><code><code><div>Line, SavingsAccount
-</div></code></code></pre>
+<pre class="hljs"><code><div>Line, SavingsAccount
+</div></code></pre>
 <h4 id="cs302-camel-case-for-variable-names">#CS302 Camel case for variable names</h4>
 <p>C++ Variable names must be in <code>camelCase</code>: mixed case starting with lower case.</p>
-<pre><code><code><div>int line;
+<pre class="hljs"><code><div>int line;
 SavingsAccount savingsAccount;
-</div></code></code></pre>
-<h4 id="cs303-non-static-private-class-variables-should-have-the-m-prefix">#CS303 Non-static private class variables should have the &quot;m&quot; prefix.</h4>
-<pre><code><code><div>private:
+</div></code></pre>
+<h4 id="cs303-non-static-private-class-variables-should-have-the-%22m%22-prefix">#CS303 Non-static private class variables should have the &quot;m&quot; prefix.</h4>
+<pre class="hljs"><code><div>private:
     int mLineSize;
     SavingsAccount mSavingsAccount;
-</div></code></code></pre>
-<h4 id="cs304-static-private-class-variables-should-have-the-c-prefix">#CS304: Static private class variables should have the &quot;c&quot; prefix.</h4>
-<pre><code><code><div>private:
+</div></code></pre>
+<h4 id="cs304-static-private-class-variables-should-have-the-%22c%22-prefix">#CS304: Static private class variables should have the &quot;c&quot; prefix.</h4>
+<pre class="hljs"><code><div>private:
     static int cLineSize;
     static SavingsAccount cSavingsAccount;
-</div></code></code></pre>
-<h4 id="cs305-static-variables-non-class-members-should-have-the-g-prefix">#CS305: Static variables (non-class members) should have the &quot;g&quot; prefix.</h4>
-<pre><code><code><div>static int gLine;
-</div></code></code></pre>
+</div></code></pre>
+<h4 id="cs305-static-variables-non-class-members-should-have-the-%22g%22-prefix">#CS305: Static variables (non-class members) should have the &quot;g&quot; prefix.</h4>
+<pre class="hljs"><code><div>static int gLine;
+</div></code></pre>
 <h4 id="cs305m-global-constant-names-including-enum-values-must-be-all-uppercase-using-underscore-to-separate-words">#CS305M Global constant names (including enum values) must be all uppercase using underscore to separate words.</h4>
-<pre><code><code><div>static constexpr int MAX_ITERATIONS = 10;
+<pre class="hljs"><code><div>static constexpr int MAX_ITERATIONS = 10;
 enum { RED, GREEN, BLUE };
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs306-names-representing-methods-or-functions-must-be-written-in-mixed-case-starting-with-lower-case">#CS306 Names representing methods or functions must be written in mixed case starting with lower case.</h4>
-<pre><code><code><div>QString name();
+<pre class="hljs"><code><div>QString name();
 double computeTotalWidth();
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs307-names-representing-template-types-should-be-a-single-uppercase-letter">#CS307 Names representing template types should be a single uppercase letter.</h4>
-<pre><code><code><div>template&lt;class T&gt; ...
+<pre class="hljs"><code><div>template&lt;class T&gt; ...
 template&lt;class C, class D&gt; ...
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs308-generic-variables-should-have-the-same-name-as-their-type">#CS308 Generic variables should have the same name as their type.</h4>
-<pre><code><code><div>void setTopic(Topic *topic)
+<pre class="hljs"><code><div>void setTopic(Topic *topic)
 // NOT: void setTopic(Topic *value)
 // NOT: void setTopic(Topic *aTopic)
 // NOT: void setTopic(Topic *t)
@@ -368,55 +698,55 @@ template&lt;class C, class D&gt; ...
 void connect(Database *database)
 // NOT: void connect(Database *db)
 // NOT: void connect (Database *oracleDB)
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs308-variables-with-a-large-scope-should-have-long-names-variables-with-a-small-scope-can-have-shorter-names">#CS308 Variables with a large scope should have long names, variables with a small scope can have shorter names.</h4>
 <h4 id="cs309-the-name-of-the-object-is-implicit-and-should-be-avoided-in-a-method-name">#CS309 The name of the object is implicit, and should be avoided in a method name.</h4>
-<pre><code><code><div>line.length(); // NOT: line.lineLength();
-</div></code></code></pre>
+<pre class="hljs"><code><div>line.length(); // NOT: line.lineLength();
+</div></code></pre>
 <h3 id="specific-naming-conventions">Specific Naming Conventions</h3>
 <h4 id="cs311-the-term-set-must-be-used-where-an-attribute-is-changed-directly">#CS311 The term set must be used where an attribute is changed directly.</h4>
-<pre><code><code><div>employee.setName(name);
+<pre class="hljs"><code><div>employee.setName(name);
 matrix.setElement(2, 4, value);
-</div></code></code></pre>
-<h4 id="cs312-methods-that-return-a-value-should-be-named-after-the-value-they-return-without-get-prefix">#CS312 Methods that return a value should be named after the value they return (without get prefix).</h4>
-<pre><code><code><div>employee.name();  // NOT employee.getName();
-matrix.element(2, 4);  // NOT matrix.getElement(2, 4);
-</div></code></code></pre>
+</div></code></pre>
+<h4 id="cs312m-methods-that-return-a-value-should-be-named-after-the-value-they-return-with-get-prefix">#CS312M Methods that return a value should be named after the value they return, with get prefix.</h4>
+<pre class="hljs"><code><div>employee.getName();  
+matrix.getElement(2, 4);  
+</div></code></pre>
 <h4 id="cs313-the-compute-prefix-should-be-used-in-methods-where-something-complex-is-computed">#CS313 The <code>compute</code> prefix should be used in methods where something (complex) is computed.</h4>
-<pre><code><code><div>valueSet-&gt;computeAverage();
+<pre class="hljs"><code><div>valueSet-&gt;computeAverage();
 matrix-&gt;computeInverse();
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs314-the-find-prefix-should-be-used-in-methods-where-something-is-looked-up">#CS314 The <code>find</code> prefix should be used in methods where something is looked up.</h4>
-<pre><code><code><div>vertex.findNearestVertex();
+<pre class="hljs"><code><div>vertex.findNearestVertex();
 matrix.findMinElement();
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs315-the-init-prefix-should-be-used-where-an-object-or-a-concept-is-established-and-match-with-a-corresponding-cleanup-prefix">#CS315 The <code>init</code> prefix should be used where an object or a concept is established and match with a corresponding <code>cleanup</code> prefix.</h4>
-<pre><code><code><div>printer.initFontSet();
+<pre class="hljs"><code><div>printer.initFontSet();
 :
 printer.cleanupFontSet();
 
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs316-variables-representing-gui-components-should-be-suffixed-by-the-component-type-name">#CS316 Variables representing GUI components should be suffixed by the component type name.</h4>
-<pre><code><code><div>mainWindow, propertiesDialog, widthScale, loginText, leftScrollbar, mainForm, fileMenu, minLabel, exitButton, yesToggle etc.
-</div></code></code></pre>
+<pre class="hljs"><code><div>mainWindow, propertiesDialog, widthScale, loginText, leftScrollbar, mainForm, fileMenu, minLabel, exitButton, yesToggle etc.
+</div></code></pre>
 <h4 id="cs317-plural-form-should-be-used-on-names-representing-a-collection-of-objects">#CS317 Plural form should be used on names representing a collection of objects.</h4>
-<pre><code><code><div>vector&lt;Point&gt; points;
+<pre class="hljs"><code><div>vector&lt;Point&gt; points;
 int values[];
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs318-the-n-prefix-should-be-used-for-variables-representing-a-number-of-objects">#CS318 The <code>n</code> prefix should be used for variables representing a number of objects.</h4>
-<pre><code><code><div>nPoints, nLines
-</div></code></code></pre>
+<pre class="hljs"><code><div>nPoints, nLines
+</div></code></pre>
 <h4 id="cs319m-use-normal-variable-name-for-range-based-for-loop-iterator-variables-should-be-called-i-j-k-etc">#CS319M Use normal variable name for range-based for loop, Iterator variables should be called i, j, k etc.</h4>
 <p><strong>Modification:</strong>
 Prefer range-based for loop: use regular variable naming as it is more natural.</p>
-<pre><code><code><div>for (auto &amp;row : matrix) {
+<pre class="hljs"><code><div>for (auto &amp;row : matrix) {
     for (auto &amp;cell : row) {
         :
     }
 }
-</div></code></code></pre>
+</div></code></pre>
 <p>When using iterator:</p>
-<pre><code><code><div>for (int i = 0; i &lt; nTables); ++i) {
+<pre class="hljs"><code><div>for (int i = 0; i &lt; nTables); ++i) {
     :
 }
 
@@ -424,9 +754,9 @@ for (auto i = matrix.begin(); i != matrix.end(); ++i) {
     Row row = *i;
     :
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs320-the-is-prefix-should-be-used-for-boolean-variables-and-methods">#CS320 The <code>is</code> prefix should be used for boolean variables and methods.</h4>
-<pre><code><code><div>bool isSet() const { return mIsSet; }
+<pre class="hljs"><code><div>bool isSet() const { return mIsSet; }
 bool isVisible() const;
 bool isFinished() const;
 
@@ -438,43 +768,43 @@ bool mIsOpen;
 bool hasLicense();
 bool canEvaluate();
 bool shouldSort();
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs321-complement-names-must-be-used-for-complement-operations">#CS321 Complement names must be used for complement operations.</h4>
-<pre><code><code><div>init/cleanup, add/remove, create/destroy, start/stop, insert/delete, increment/decrement, old/new, begin/end, first/last, up/down, min/max, next/previous, old/new, open/close, show/hide, suspend/resume, etc.
-</div></code></code></pre>
+<pre class="hljs"><code><div>init/cleanup, add/remove, create/destroy, start/stop, insert/delete, increment/decrement, old/new, begin/end, first/last, up/down, min/max, next/previous, old/new, open/close, show/hide, suspend/resume, etc.
+</div></code></pre>
 <h4 id="cs322-negated-boolean-names-must-be-avoided">#CS322 Negated boolean names must be avoided.</h4>
-<pre><code><code><div>bool hasErrors;   // NOT: hasNoError
+<pre class="hljs"><code><div>bool hasErrors;   // NOT: hasNoError
 bool isFound;     // NOT: isNotFound
 bool isRunning()  // NOT: isNotRunning()
-</div></code></code></pre>
+</div></code></pre>
 <h3 id="files">Files</h3>
 <h4 id="cs324-use-pascal-case-for-source-files">#CS324 Use pascal case for source files</h4>
 <p>C++ header files should have the <code>.hpp</code> extension. C++ source files should have the <code>.cpp</code> extension.</p>
-<pre><code><code><div>MyClass.cpp, MyClass.hpp
-</div></code></code></pre>
+<pre class="hljs"><code><div>MyClass.cpp, MyClass.hpp
+</div></code></pre>
 <h4 id="cs325-a-class-should-be-declared-in-a-header-file-and-defined-in-a-source-file-where-the-name-of-the-files-match-the-name-of-the-class">#CS325 A class should be declared in a header file and defined in a source file where the name of the files match the name of the class.</h4>
-<pre><code><code><div>MyClass.hpp:
+<pre class="hljs"><code><div>MyClass.hpp:
 
 class MyClass {
    :
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs326-inline-simple-methods">#CS326 Inline simple methods</h4>
 <p>Inlining should be used for methods that can be written in one line or so (typically getters and setters), if no additional include is required.</p>
-<pre><code><code><div>class MyClass {
+<pre class="hljs"><code><div>class MyClass {
     void setValue(Value value)  { mValue = value; }
     Value value() const         { return mValue; }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs327-inline-performance-critical-methods">#CS327 Inline performance critical methods</h4>
 <p>For optimization reasons, longer methods can also be inlined, in this case the body of the method must be placed in the header file,
 just below the class declaration. Remember to avoid early optimization.</p>
 <h3 id="include-files-and-include-statements">Include Files and Include Statements</h3>
 <h4 id="cs329-header-files-must-contain-an-include-guard">#CS329 Header files must contain an include guard</h4>
 <p>Include guard format should use file name (note #CS325 file name = class name).</p>
-<pre><code><code><div>#ifndef CLASS_NAME_HPP
+<pre class="hljs"><code><div>#ifndef CLASS_NAME_HPP
 #define CLASS_NAME_HPP
     :
 #endif
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs330-sort-include-statements-in-header-blocks">#CS330 Sort <code>#include</code> statements in header blocks</h4>
 <p><code>#include</code> statements in a header or a source file should respect the following order, separated by an empty line:</p>
 <ul>
@@ -485,7 +815,7 @@ just below the class declaration. Remember to avoid early optimization.</p>
 <li>ODE headers in alphabetical order</li>
 <li>standard headers come last in alphabetical order</li>
 </ul>
-<pre><code><code><div>%From  WbTriangleMesh.cpp
+<pre class="hljs"><code><div>%From  WbTriangleMesh.cpp
 
 #include &quot;WbTriangleMesh.hpp&quot;
 
@@ -498,20 +828,20 @@ just below the class declaration. Remember to avoid early optimization.</p>
 
 #include &lt;cassert&gt;
 #include &lt;limits&gt;
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs330m-only-include-header-file-needed-to-declare-a-class-in-the-class-header-file">#CS330M Only <code>#include</code> header file needed to declare a class in the class header file</h4>
 <p><strong>Modification of Webots style guide to clarify:</strong>
 <code>#include</code> needed to implement the class belong in the cpp file instead.</p>
 <h4 id="cs331-dont-use-an-include-when-a-forward-declaration-would-suffice">#CS331 Don't use an #include when a forward declaration would suffice</h4>
-<pre><code><code><div>#include &quot;MyOtherClass.hpp&quot;  // NO
+<pre class="hljs"><code><div>#include &quot;MyOtherClass.hpp&quot;  // NO
 
 class MyOtherClass;  // YES
-</div></code></code></pre>
+</div></code></pre>
 <h3 id="statements">Statements</h3>
 <h4 id="cs333-types-that-are-local-to-one-file-only-can-be-declared-inside-that-file">#CS333 Types that are local to one file only can be declared inside that file.</h4>
 <h4 id="cs334-use-a-struct-only-for-passive-objects-that-carry-data-everything-else-is-a-class">#CS334 Use a struct only for passive objects that carry data; everything else is a class.</h4>
 <h4 id="cs335-the-parts-of-a-class-must-be-sorted-public-protected-and-private-all-sections-must-be-identified-explicitly">#CS335 The parts of a class must be sorted public, protected and private. All sections must be identified explicitly.</h4>
-<pre><code><code><div>class MyClass {
+<pre class="hljs"><code><div>class MyClass {
 public:
     ...
 protected:
@@ -519,18 +849,18 @@ protected:
 private:
     ...
 }
-</div></code></code></pre>
+</div></code></pre>
 <h3 id="inheritance">Inheritance</h3>
 <h4 id="cs337-do-not-change-the-publicprotectedprivate-status-of-a-method-in-derived-classes">#CS337 Do not change the public/protected/private status of a method in derived classes.</h4>
 <h4 id="cs338-use-virtual-in-front-of-a-derived-function-declaration-if-the-base-class-function-was-declared-virtual">#CS338 Use virtual in front of a derived function declaration if the base class function was declared virtual.</h4>
 <h4 id="cs339-always-declare-destructors-as-virtual-except-in-classes-that-are-not-meant-to-be-derived">#CS339 Always declare destructors as virtual except in classes that are not meant to be derived.</h4>
 <h4 id="cs340-declare-a-function-virtual-only-if-it-is-going-to-be-used-polymorphically">#CS340 Declare a function virtual only if it is going to be used polymorphically.</h4>
 <h4 id="cs341-use-public-inheritance-exclusively">#CS341 Use public inheritance exclusively.</h4>
-<pre><code><code><div>class DerivedClass : public BaseClass {
-</div></code></code></pre>
+<pre class="hljs"><code><div>class DerivedClass : public BaseClass {
+</div></code></pre>
 <h3 id="variables">Variables</h3>
 <h4 id="cs343b-variables-should-be-initialized-where-they-are-declared">#CS343B Variables should be initialized where they are declared.</h4>
-<pre><code><code><div>QString s {&quot;abc&quot;};
+<pre class="hljs"><code><div>QString s {&quot;abc&quot;};
 
 int x, y, z;
 computeCenter(&amp;x, &amp;y, &amp;z);
@@ -539,34 +869,34 @@ if (x &gt; z) {
     int w = x * z;
     :
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs343m-variable-should-be-declared-where-they-are-used">#CS343M Variable should be declared where they are used</h4>
 <p>Variable should be declared as they are used to avoid having to scroll up to find the variable declaration and help ensure variable is initialized.</p>
-<pre><code><code><div>int x {0};
+<pre class="hljs"><code><div>int x {0};
 use (x);
 
 int y {1};
 use (y);
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs344-member-variables-should-be-initialized-in-the-constructor-initialization-list-provided-it-doesnt-yield-code-duplication-in-other-constructors">#CS344 Member variables should be initialized in the constructor initialization list provided it doesn't yield code duplication in other constructors.</h4>
-<pre><code><code><div>MyClass::MyClass() : mMySize(10), mMyObject1(&quot;obj1&quot;), mMyObject2(&quot;obj2&quot;) {
+<pre class="hljs"><code><div>MyClass::MyClass() : mMySize(10), mMyObject1(&quot;obj1&quot;), mMyObject2(&quot;obj2&quot;) {
     % non trivial initialization;
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs345-place-a-functions-variables-in-the-narrowest-scope-possible-block-function-class-and-initialize-variables-in-the-declaration">#CS345 Place a function's variables in the narrowest scope possible (block, function, class), and initialize variables in the declaration.</h4>
-<pre><code><code><div>int i;
+<pre class="hljs"><code><div>int i;
 i = f();      // BAD - initialization separate from declaration.
 
 int j = g();  // GOOD - declaration has initialization.
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs346-do-not-use-global-variables-use-singletons-or-static-methods-instead">#CS346 Do not use global variables, use singletons or static methods instead.</h4>
 <h4 id="cs347-use-the-copy-constructor-for-an-object-definition">#CS347 Use the copy constructor for an object definition</h4>
-<pre><code><code><div>WbVector3 u(0.0, 1.0, 0.0);
+<pre class="hljs"><code><div>WbVector3 u(0.0, 1.0, 0.0);
 WbVector3 v(u); // YES
 WbVector3 w = u; // the very same thing as above, but NO
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs348-class-variables-should-never-be-declared-public-use-getters-and-setters-instead">#CS348 Class variables should never be declared public. Use getters and setters instead.</h4>
-<pre><code><code><div>// BAD!
+<pre class="hljs"><code><div>// BAD!
 class MyClass {
 public:
     int numEmployee;
@@ -581,49 +911,49 @@ public:
 private:
     int mNumberOfEmployee;
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs349-c-pointers-and-references-should-have-their-reference-symbol-next-to-the-name-rather-than-to-the-type">#CS349 C++ pointers and references should have their reference symbol next to the name rather than to the type.</h4>
-<pre><code><code><div>float *x, *y, *z;  // NOT: float* x, y, z;
+<pre class="hljs"><code><div>float *x, *y, *z;  // NOT: float* x, y, z;
 int &amp;y;            // NOT: int&amp; y;
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs350-implicit-test-for-0-should-not-be-used-other-than-for-boolean-and-pointer-variables">#CS350 Implicit test for 0 should not be used other than for boolean and pointer variables.</h4>
-<pre><code><code><div>if (isFinished()) {
+<pre class="hljs"><code><div>if (isFinished()) {
     :
 }
-</div></code></code></pre>
+</div></code></pre>
 <p><strong>Additional example</strong></p>
-<pre><code><code><div>// NO
+<pre class="hljs"><code><div>// NO
 if (table.nRow()) {
     :
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs351-do-not-test-boolean-expressions-against-true-or-false">#CS351 Do not test boolean expressions against true or false</h4>
-<pre><code><code><div>// YES
+<pre class="hljs"><code><div>// YES
 if (isFinished()) ...
 if (!isOpen()) ...
 
 // NO
 if (isFinished() == true) ...
 if (isOpen() == false) ...
-</div></code></code></pre>
+</div></code></pre>
 <h3 id="loops">Loops</h3>
 <h4 id="cs353m-loop-variables-should-be-initialized-immediately-before-the-loop-for-while-loop">#CS353M Loop variables should be initialized immediately before the loop for while loop.</h4>
-<pre><code><code><div>bool isDone = false;
+<pre class="hljs"><code><div>bool isDone = false;
 while (!isDone) {
     :
 }
-</div></code></code></pre>
+</div></code></pre>
 <p><strong>Modification:</strong>
 For for loop declare loop variable in the for loop initialization step to minimize the scope of the loop variable.</p>
 <h4 id="cs354-the-use-of-break-and-continue-in-loops-should-only-be-used-if-they-give-higher-readability-than-their-structured-counterparts">#CS354 The use of break and continue in loops should only be used if they give higher readability than their structured counterparts.</h4>
 <h4 id="cs355-the-while-true-form-should-be-used-for-infinite-loops">#CS355 The <code>while (true)</code> form should be used for infinite loops.</h4>
-<pre><code><code><div>while (true) {
+<pre class="hljs"><code><div>while (true) {
     :
 }
-</div></code></code></pre>
+</div></code></pre>
 <h3 id="conditionals">Conditionals</h3>
 <h4 id="cs357-the-if-else-class-of-statements-should-have-the-following-form">#CS357 The if-else class of statements should have the following form:</h4>
-<pre><code><code><div>if (condition) {
+<pre class="hljs"><code><div>if (condition) {
     statements;
 }
 
@@ -640,21 +970,21 @@ if (condition) {
 } else {
     statements;
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs358-a-for-statement-should-have-the-following-form">#CS358 A for statement should have the following form:</h4>
-<pre><code><code><div>for (initialization; condition; update) {
+<pre class="hljs"><code><div>for (initialization; condition; update) {
     statements;
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs359-a-while-statement-should-have-the-following-form">#CS359 A while statement should have the following form:</h4>
-<pre><code><code><div>while (condition) {
+<pre class="hljs"><code><div>while (condition) {
     statements;
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs360m-if-while-or-for-statement-must-be-written-with-brackets">#CS360M <code>if</code>, <code>while</code>, or <code>for</code> statement must be written with brackets.</h4>
 <p><strong>Modification:</strong>
 While single <code>if</code>, <code>while</code>, or <code>for</code> statement may be written without brackets, it can be difficult to spot and can lead to incorrect code.</p>
-<pre><code><code><div>// BAD:
+<pre class="hljs"><code><div>// BAD:
 if (condition)
     for (initialization; condition; update)
         statement;
@@ -668,11 +998,11 @@ if (condition) {
     }
 }
 
-</div></code></code></pre>
+</div></code></pre>
 <p>Original Webot style guide #CS360:
 Single <code>if</code>, <code>while</code> or <code>for</code> statement must be written without brackets. The statement part should be put on a separate line. In case of nested block keep brackets.</p>
 <h4 id="cs361-assignment-in-conditionals-must-be-avoided">#CS361 Assignment in conditionals must be avoided.</h4>
-<pre><code><code><div>// GOOD
+<pre class="hljs"><code><div>// GOOD
 File *fileHandle = open(fileName, &quot;w&quot;);
 if (!fileHandle) {
     :
@@ -682,33 +1012,33 @@ if (!fileHandle) {
 if (!(fileHandle = open(fileName, &quot;w&quot;))) {
     :
 }
-</div></code></code></pre>
-<h3 id="functions-1">Functions</h3>
+</div></code></pre>
+<h3 id="functions">Functions</h3>
 <h4 id="cs363-write-small-and-focused-functions-the-body-of-a-function-should-not-exceed-one-page-no-scrolling">#CS363 Write small and focused functions: the body of a function should not exceed one page (no scrolling).</h4>
 <h4 id="cs364-high-level-and-low-level-code-should-not-be-mixed-in-a-same-function">#CS364 High-level and low-level code should not be mixed in a same function.</h4>
-<h4 id="cs365m-when-defining-a-function-parameters-should-be-inputs-only-for-out-output-values-prefer-return-values-to-output-parameters">#CS365M When defining a function, parameters should be inputs only, For &quot;out&quot; output values, prefer return values to output parameters</h4>
+<h4 id="cs365m-when-defining-a-function-parameters-should-be-inputs-only-for-%22out%22-output-values-prefer-return-values-to-output-parameters">#CS365M When defining a function, parameters should be inputs only, For &quot;out&quot; output values, prefer return values to output parameters</h4>
 <p><strong>Modification:</strong>
 This item is modified to follow CPP Core Guideline F.20[^f.20].
-[^f.20]: <a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f20-for-out-output-values-prefer-return-values-to-output-parameters">https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f20-for-out-output-values-prefer-return-values-to-output-parameters</a></p>
+[^f.20]: https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f20-for-out-output-values-prefer-return-values-to-output-parameters</p>
 <p>Reason:
 A return value is self-documenting, whereas a <code>&amp;</code> could be either in-out or out-only and is liable to be misused.
 This includes large objects like standard containers that use implicit move operations for performance and to avoid explicit memory management.</p>
 <p>If you have multiple values to return, use a named struct, std::tuple or similar.</p>
 <p><strong>Original:</strong>
 #CS365 When defining a function, parameter order is: inputs, then outputs. If a function returns only one value use the return type.</p>
-<pre><code><code><div>void computePoints(const Line &amp;line, Point &amp;p1, Point &amp;p2);
+<pre class="hljs"><code><div>void computePoints(const Line &amp;line, Point &amp;p1, Point &amp;p2);
 Point computePoint(const Line &amp;line1, const Line &amp;line2);
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs366-prefer-pre-incrementation-over-post-incrementation-whenever-possible">#CS366 Prefer pre-incrementation over post-incrementation whenever possible.</h4>
-<pre><code><code><div>vector&lt;MyClass&gt;::iterator i;
+<pre class="hljs"><code><div>vector&lt;MyClass&gt;::iterator i;
 for (i = list.begin(); i != list.end(); ++i) { % NOT i++
     Element element = *i;
     :
 }
-</div></code></code></pre>
+</div></code></pre>
 <h3 id="enums">Enums</h3>
 <h4 id="cs367-prefer-implicit-initialization">#CS367 Prefer implicit initialization.</h4>
-<pre><code class="language-c++"><div><span class="hljs-keyword">enum</span> {
+<pre class="hljs"><code><div><span class="hljs-keyword">enum</span> {
     A, <span class="hljs-comment">// implicitly 0</span>
     B, <span class="hljs-comment">// implicitly 1</span>
     C = <span class="hljs-number">12</span>,
@@ -718,55 +1048,55 @@ for (i = list.begin(); i != list.end(); ++i) { % NOT i++
 <h4 id="cs367b-prefer-enum-class-over-enums">#CS367B Prefer enum class over enums</h4>
 <p><strong>Modification:</strong>
 This item is added to follow CPP Core Guideline Enum.3 [^enum.3]
-[^enum.3]: <a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#enum3-prefer-class-enums-over-plain-enums">https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#enum3-prefer-class-enums-over-plain-enums</a></p>
+[^enum.3]: https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#enum3-prefer-class-enums-over-plain-enums</p>
 <h5 id="reason">Reason</h5>
 <p>To minimize surprises: traditional enums convert to int too readily. Enum class enable type checking.</p>
-<pre><code class="language-c++"><div><span class="hljs-keyword">enum</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Color</span> {</span> red, green = <span class="hljs-number">20</span>, blue };
+<pre class="hljs"><code><div><span class="hljs-keyword">enum</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Color</span> {</span> red, green = <span class="hljs-number">20</span>, blue };
 Color ballColour = Color::blue;
 </div></code></pre>
 <h3 id="miscellaneous">Miscellaneous</h3>
 <h4 id="cs368-prefer-int-data-type-for-integer-numbers-including-unsigned-integer-numbers">#CS368 Prefer <code>int</code> data type for integer numbers, including unsigned integer numbers.</h4>
 <h4 id="cs369-prefer-double-data-type-for-floating-point-numbers">#CS369 Prefer <code>double</code> data type for floating point numbers.</h4>
 <h4 id="cs370-floating-point-constants-should-be-written-with-decimal-point-and-at-least-one-decimal">#CS370 Floating point constants should be written with decimal point and at least one decimal.</h4>
-<pre><code><code><div>double total = 0.0; // NOT: double total = 0;
+<pre class="hljs"><code><div>double total = 0.0; // NOT: double total = 0;
 double speed = 3.0e8; // NOT: double speed = 3e8;
 
 double sum = (a + b) * 10.0;
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs371-use-0-for-integers-00-for-reals-nullptr-for-pointers-and-0-for-chars">#CS371 Use 0 for integers, 0.0 for reals, nullptr for pointers, and '\0' for chars.</h4>
 <p><strong>Modification:</strong>
 This item is modified to follow CPP Core Guideline ES.47 <a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es47-use-nullptr-rather-than-0-or-null">^es.47</a> use nullptr rather than 0 or NULL.
 Reason:
 Readability. Minimize surprises: <code>nullptr</code> cannot be confused with an <code>int</code>. <code>nullptr</code> also has a well-specified (very restrictive) type, and thus works in more scenarios where type deduction might do the wrong thing on <code>NULL</code> or <code>0</code>.</p>
-<pre><code><code><div>if (p == nullptr &amp;&amp; fabs(a) == 0.0 &amp;&amp; size == 0) {
+<pre class="hljs"><code><div>if (p == nullptr &amp;&amp; fabs(a) == 0.0 &amp;&amp; size == 0) {
     char c = '\0';
 }
-</div></code></code></pre>
-<h4 id="cs372-use-c-static_cast-instead-of-c-style-casts">#CS372 Use C++ static_cast&lt;&gt;() instead of C style casts.</h4>
-<pre><code><code><div>A *a = (A*)b;  // NO
+</div></code></pre>
+<h4 id="cs372-use-c-staticcast-instead-of-c-style-casts">#CS372 Use C++ static_cast&lt;&gt;() instead of C style casts.</h4>
+<pre class="hljs"><code><div>A *a = (A*)b;  // NO
 A *a = static_cast&lt;A*&gt;(b);  // YES
-</div></code></code></pre>
-<h4 id="cs373-use-c-dynamic_cast-to-test-the-run-time-type-of-an-object">#CS373 Use C++ dynamic_cast&lt;&gt;() to test the run-time type of an object.</h4>
-<pre><code><code><div>A *a = dynamic_cast&lt;A*&gt;(b);
+</div></code></pre>
+<h4 id="cs373-use-c-dynamiccast-to-test-the-run-time-type-of-an-object">#CS373 Use C++ dynamic_cast&lt;&gt;() to test the run-time type of an object.</h4>
+<pre class="hljs"><code><div>A *a = dynamic_cast&lt;A*&gt;(b);
 if (a) {
     doSomethingWithA(a);
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs374-do-never-use-the-friend-keyword-but-for-operator-overloading">#CS374 Do never use the friend keyword (but for operator overloading).</h4>
 <h4 id="cs375-avoid-defining-macros-at-all-costs">#CS375 Avoid defining macros at all costs.</h4>
 <h4 id="cs375b-use-constexpr-variable-or-enum-instead-of-define">#CS375B Use <code>constexpr</code> variable or <code>enum</code> instead of <code>#define</code></h4>
 <p><strong>Modification:</strong>
 <code>constexpr</code> is typed variable that compiler will type check for safety whereas <code>#define</code> is preprocessor token substitution that may have unintended consequence.
 This follows CPP Core Guideline [^enum.1]
-[^enum.1]:<a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#enum1-prefer-enumerations-over-macros">https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#enum1-prefer-enumerations-over-macros</a>
+[^enum.1]:https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#enum1-prefer-enumerations-over-macros
 Reason:
 Macros do not obey scope and type rules. Also, macro names are removed during preprocessing and so usually don't appear in tools like debuggers.</p>
-<pre><code><code><div>constexpr int MAX_ROW = 10; // YES
+<pre class="hljs"><code><div>constexpr int MAX_ROW = 10; // YES
 #define MAX_ROW 10 // NO
 
 enum class Web_color { red = 0xFF0000, green = 0x00FF00, blue = 0x0000FF }; // Yes
 #define RED 0xFF0000 // NO
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs376-avoid-operator-overloading-except-in-these-two-cases">#CS376 Avoid operator overloading, except in these two cases:</h4>
 <ul>
 <li>To define mathematical classes, and only if the operators supports a known math syntax</li>
@@ -778,19 +1108,19 @@ enum class Web_color { red = 0xFF0000, green = 0x00FF00, blue = 0x0000FF }; // Y
 <li>Declare const any pointer or reference parameter that will not be altered by a function.</li>
 <li>Declare const any variable which value will not change.</li>
 </ul>
-<pre><code><code><div>double computeTotal(const double v[], int n) const;
+<pre class="hljs"><code><div>double computeTotal(const double v[], int n) const;
 const double size = 4.5;
-</div></code></code></pre>
+</div></code></pre>
 <h3 id="white-space">White Space</h3>
 <h4 id="cs379-special-characters-like-tab-and-page-break-must-be-avoided">#CS379 Special characters like Tab and page break must be avoided.</h4>
 <h4 id="cs380m-basic-indentation-should-be-4-spaces">#CS380M Basic indentation should be 4 spaces.</h4>
 <h4 id="cs381-conventional-operators-should-be-surrounded-by-a-space-character-commas-and-semi-colons-in-for-loops-should-be-followed-by-a-white-space">#CS381 Conventional operators should be surrounded by a space character. Commas and semi-colons (in for loops) should be followed by a white space.</h4>
-<pre><code><code><div>a = (b + c) * d; // NOT: a=(b+c)*d
+<pre class="hljs"><code><div>a = (b + c) * d; // NOT: a=(b+c)*d
 doSomething(a, b, c, d); // NOT: doSomething(a,b,c,d);
 for (i = 0; i &lt; 10; ++i) { // NOT: for(i=0;i&lt;10;i++){ ...
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs382-logical-units-within-a-block-should-be-separated-by-one-blank-line">#CS382 Logical units within a block should be separated by one blank line.</h4>
-<pre><code><code><div>Matrix4x4 matrix = new Matrix4x4();
+<pre class="hljs"><code><div>Matrix4x4 matrix = new Matrix4x4();
 
 double cosAngle = Math.cos(angle);
 double sinAngle = Math.sin(angle);
@@ -801,22 +1131,22 @@ matrix.setElement(2, 1, -sinAngle);
 matrix.setElement(2, 2, cosAngle);
 
 multiply(matrix);
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs383-use-alignment-wherever-it-enhances-readability">#CS383 Use alignment wherever it enhances readability.</h4>
-<h3 id="comments-1">Comments</h3>
+<h3 id="comments">Comments</h3>
 <h4 id="cs385-use--for-all-comments-including-multi-line-comments">#CS385 Use // for all comments, including multi-line comments.</h4>
 <p>Notes: It is common to use /// to document the interface (API) for other users, and // for general comment.</p>
 <h4 id="cs386-use--only-for-temporary-debugging-purposes">#CS386 Use /**/ only for temporary debugging purposes.</h4>
 <h4 id="cs387-follow-the-standard-indentation-for-a-switch-statement">#CS387 Follow the standard indentation for a <code>switch</code> statement.</h4>
-<pre><code><code><div>switch(choice) {
+<pre class="hljs"><code><div>switch(choice) {
 case 0: printf(&quot;Good choice!\n&quot;); break;
 case 1: printf(&quot;Not optimal, you can do better\n&quot;); break;
 case 2: printf(&quot;Please give it a second thought\n&quot;); break;
 default: assert(false);
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs388-follow-the-standard-indentation-for-a-class-declaration">#CS388 Follow the standard indentation for a class declaration</h4>
-<pre><code><code><div>class MyClass: public BaseClass {
+<pre class="hljs"><code><div>class MyClass: public BaseClass {
 
 public:
     MyClass();
@@ -826,9 +1156,9 @@ public:
 private:
     Data *mData;
 }
-</div></code></code></pre>
+</div></code></pre>
 <h4 id="cs389-in-a-class-declaration-order-privacy-levels-signals-and-slots-the-following-way">#CS389 In a class declaration, order privacy levels, signals and slots, the following way:</h4>
-<pre><code><code><div>class MyClass: public QObject {
+<pre class="hljs"><code><div>class MyClass: public QObject {
     Q_OBJECT
 public:
     MyClass();
@@ -852,7 +1182,7 @@ private:
 private slots:
     showPicture();
 }
-</div></code></code></pre>
+</div></code></pre>
 
-    </body>
-    </html>
+</body>
+</html>

@@ -348,11 +348,11 @@ employee.setName(name);
 matrix.setElement(2, 4, value);
 ```
 
-#### #CS312 Methods that return a value should be named after the value they return (without get prefix).
+#### #CS312M Methods that return a value should be named after the value they return, with get prefix.
 
 ```
-employee.name();  // NOT employee.getName();
-matrix.element(2, 4);  // NOT matrix.getElement(2, 4);
+employee.getName();  
+matrix.getElement(2, 4);  
 ```
 
 #### #CS313 The `compute` prefix should be used in methods where something (complex) is computed.
