@@ -1,4 +1,4 @@
-# MTRN2500 CPP Style Guide
+# MTRN2500 CPP Style Guide (Long)
 
 - [MTRN2500 CPP Style Guide](#mtrn2500-cpp-style-guide)
 	- [0. Purpose](#0-purpose)
